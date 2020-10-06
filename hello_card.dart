@@ -49,6 +49,13 @@ class HelloRectangle extends StatelessWidget {
                 width: 400,
                 height: 180,
                 color: Colors.white,
+                child: Center(
+                    child: Text(
+                  '@dshevchenkoo',
+                  style: TextStyle(
+                    fontSize: 50,
+                  ),
+                )),
               ),
             ),
           ],
