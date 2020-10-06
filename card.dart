@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-const _padding = const EdgeInsets.all(90.0);
+const _padding = const EdgeInsets.all(20.0);
 
 void main() {
   runApp(
@@ -22,17 +22,37 @@ class HelloRectangle extends StatelessWidget {
   Widget build(BuildContext context) {
     return Center(
       child: Container(
-        color: Colors.greenAccent,
-        width: 300,
+        decoration: BoxDecoration(
+            color: Colors.redAccent,
+            borderRadius: BorderRadius.all(Radius.circular(20))),
+        width: 400,
         height: 400,
-        child: Padding(
-            padding: _padding,
-            child: Text(
+        child: Column(
+          children: [
+            Padding(
+              padding: _padding,
+              child: Text(
                 'Hello!',
-              style: TextStyle(fontSize: 40),
-              textAlign: TextAlign.center,
+                style: TextStyle(fontSize: 40, color: Colors.white),
+                textAlign: TextAlign.center,
+              ),
             ),
-          ),
+            Padding(
+              padding: const EdgeInsets.only(bottom: 10),
+              child: Text(
+                'my name is',
+                style: TextStyle(fontSize: 20, color: Colors.white),
+              ),
+            ),
+            Center(
+              child: Container(
+                width: 400,
+                height: 180,
+                color: Colors.white,
+              ),
+            ),
+          ],
+        ),
       ),
     );
     throw UnimplementedError();
